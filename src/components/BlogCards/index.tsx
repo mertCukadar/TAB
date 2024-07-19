@@ -9,7 +9,7 @@ interface Blog {
   id: number;
   title: string;
   description: string;
-  image: string;
+  created_at?: string;
 }
 
 interface BlogCardProps {
@@ -30,7 +30,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
         </div>
       </div>
 
-      <Link href={`/blog/${blog.id}`} className="flex flex-col items-center justify-center w-full p-5 relative z-10 h-96 bg-blogCardBg text-white">
+      <Link href={`/blog/${blog.id}`} className="flex flex-col justify-center w-full p-5 relative z-10 h-96 bg-blogCardBg text-white">
         <div className="relative z-20 bg-opacity-50 p-8 rounded-lg transition duration-300 ease-in-out group-hover:bg-opacity-75 group-hover:scale-105">
           <h2 className="text-3xl font-bold mt-3">{blog.title}</h2>
           <p className="mt-3">{blog.description}</p>

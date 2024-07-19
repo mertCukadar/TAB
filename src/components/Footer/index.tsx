@@ -4,7 +4,7 @@ import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-700 text-gray-100 py-6 w-full">
+    <footer className="bg-backgroundDefault text-gray-100 py-6 w-full">
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0">
           <h1 className="text-2xl font-bold">Tab Mert</h1>

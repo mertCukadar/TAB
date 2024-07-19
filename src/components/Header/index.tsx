@@ -12,11 +12,11 @@ const Header = () => {
   };
 
   return (
-    <header className="text-white w-full shadow-sm bg-bgHeader fixed z-50">
+    <header className="text-white w-full shadow-sm bg-backgroundDefault">
       <nav className="flex justify-between items-center p-5 text-gray-100">
         <div>
           <Link href="/" className="flex items-center space-x-2">
-            <Image src="/logo-transparent.png" alt="Tab Mert" width={100} height={100} className="cursor-pointer" />
+            <Image src="/logo-transparent.png" alt="Tab Mert" width={50} height={50} className="cursor-pointer" />
             <h1 className="text-2xl font-bold cursor-pointer">Tab Mert</h1>
           </Link>
         </div>

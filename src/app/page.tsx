@@ -1,39 +1,25 @@
-import React from 'react';
+'use client'
+import React, { useEffect, useState } from 'react';
 import BlogCard from '@/components/BlogCards';
-import Image from 'next/image';
+import { FetchBlogs } from './api';
 
 interface Blog {
   id: number;
   title: string;
   description: string;
-  image: string;
+  created_at?: string;
 }
 
 const Page: React.FC = () => {
-  const dummy_blog: Blog[] = [
-    {
-      id: 1,
-      title: "Lorem Ipsum",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, purus ac ultrices ultricies, mi ex tincidunt turpis, non tincidunt mi odio non neque. Nullam auctor, purus ac ultrices ultricies, mi ex tincidunt turpis, non tincidunt mi odio non neque.",
-      image: "/beemo.jpg",
-    },
-    {
-      id: 2,
-      title: "Lorem Ipsum",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, purus ac ultrices ultricies, mi ex tincidunt turpis, non tincidunt mi odio non neque. Nullam auctor, purus ac ultrices ultricies, mi ex tincidunt turpis, non tincidunt mi odio non neque.",
-      image: "/beemo.jpg",
-    },
-    {
-      id: 3,
-      title: "Lorem Ipsum",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, purus ac ultrices ultricies, mi ex tincidunt turpis, non tincidunt mi odio non neque. Nullam auctor, purus ac ultrices ultricies, mi ex tincidunt turpis, non tincidunt mi odio non neque.",
-      image: "/beemo.jpg",
-    },
-  ];
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+
+  useEffect(() => {
+    FetchBlogs().then((data) => setBlogs(data));
+  }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center p-5 text-gray-100 w-full bg-backgroundDefault pt-32">
-      {dummy_blog.map((blog) => (
+    <div className="flex flex-col justify-center items-center p-5 text-gray-100 w-full bg-backgroundDefault">
+      {blogs.map((blog) => (
         <BlogCard key={blog.id} blog={blog} />
       ))}
     </div>

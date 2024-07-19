@@ -17,7 +17,8 @@ const config: Config = {
         Header: "#4196b3",
         backgroundDefault: "#2d3250",
         blogCardBg: "#424769",
-        blogbarBg: "#1f1d20",
+        blogbarBg: "#1d243d",
+        textColorCustom: "d0d9d8",
           
       }
     },

@@ -32,3 +32,14 @@ body {
     text-wrap: balance;
   }
 }
+
+.markdown-preview {
+  background-color: #2d3250;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+}
+
+.markdown-preview .code-line {
+  color: black;
+}
