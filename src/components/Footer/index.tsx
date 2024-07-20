@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaInstagram , FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -11,14 +11,14 @@ const Footer = () => {
           <p className="text-sm">© 2024 Tab Mert. All rights reserved.</p>
         </div>
         <div className="flex space-x-6">
+          <p aria-label="Instagram">
+            <FaInstagram size={24} />
+          </p>
           <p aria-label="Facebook">
             <FaFacebook size={24} />
           </p>
-          <p aria-label="Twitter">
-            <FaTwitter size={24} />
-          </p>
-          <p aria-label="Instagram">
-            <FaInstagram size={24} />
+          <p aria-label="Youtube">
+            <FaYoutube size={24} />
           </p>
         </div>
       </div>
@@ -27,16 +27,6 @@ const Footer = () => {
           <li>
             <Link href="/blog">
               <p className="hover:text-gray-300">Blog</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="/dersler">
-              <p className="hover:text-gray-300">Dersler</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="/projeler">
-              <p className="hover:text-gray-300">Projeler</p>
             </Link>
           </li>
           <li>

@@ -27,22 +27,17 @@ const Header = () => {
 
         <ul className="hidden md:flex space-x-3">
           <li className="cursor-pointer hover:text-blue-300">
-            <Link href="/blog" className="p-2 px-3">
+            <Link href="/" className="p-2 px-3">
               Blog
             </Link>
           </li>
           <li className="cursor-pointer hover:text-blue-300">
-            <Link href="/dersler" className="p-2 px-3">
-              Dersler
-            </Link>
-          </li>
-          <li className="cursor-pointer hover:text-blue-300">
-            <Link href="/projeler" className="p-2 px-3">
+            <Link href="/projects" className="p-2 px-3">
               Projeler
             </Link>
           </li>
           <li className="cursor-pointer hover:text-blue-300">
-            <Link href="/hakkimda" className="p-2 px-3">
+            <Link href="/about" className="p-2 px-3">
               Hakkımda
             </Link>
           </li>
@@ -59,22 +54,17 @@ const Header = () => {
         </div>
         <ul className="flex-grow">
           <li className="mb-4">
-            <Link href="/blog" className="p-2 px-3 block text-center hover:text-blue-300">
+            <Link href="/" className="p-2 px-3 block text-center hover:text-blue-300">
               Blog
             </Link>
           </li>
           <li className="mb-4">
-            <Link href="/dersler" className="p-2 px-3 block text-center hover:text-blue-300">
-              Dersler
-            </Link>
-          </li>
-          <li className="mb-4">
-            <Link href="/projeler" className="p-2 px-3 block text-center hover:text-blue-300">
+            <Link href="/projects" className="p-2 px-3 block text-center hover:text-blue-300">
               Projeler
             </Link>
           </li>
           <li className="mb-4">
-            <Link href="/hakkimda" className="p-2 px-3 block text-center hover:text-blue-300">
+            <Link href="/about" className="p-2 px-3 block text-center hover:text-blue-300">
               Hakkımda
             </Link>
           </li>
