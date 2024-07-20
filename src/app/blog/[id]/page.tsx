@@ -23,11 +23,11 @@ const Page: React.FC = () => {
     }, [id]);
 
     return (
-        <div className="flex flex-col p-5 text-gray-100 w-full bg-backgroundDefault h-screen">
+        <div className="flex flex-col justify-center items-center p-5 text-gray-100 w-full bg-backgroundDefault">
             <MarkdownPreview 
                 source={blogData?.markdown} 
                 className="markdown-preview"
-                style={{backgroundColor: '#2d3250', padding: '20px', borderRadius: '8px', color:'white'}} 
+                style={{backgroundColor: '#2d3250', padding: '20px', borderRadius: '8px', color:'white',boxShadow: '0 4px 8px rgba(0, 0, 0, 0.8)' , width: '90%'}} 
             />
         </div>
     );
