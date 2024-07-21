@@ -13,6 +13,7 @@ Kanalımda ve sitemde eğlence ve öğrenme bir arada! Eğer siz de teknolojiye 
 [![GitHub](https://img.shields.io/badge/GitHub-%2312100E.svg?logo=github&logoColor=white)](https://github.com/mertCukadar)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/mert-kaan-%C3%A7ukadar-740614122/)
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=youtube&logoColor=white)](https://www.youtube.com/@TabMert)
+[![GrabCAD](https://img.shields.io/badge/GrabCAD-%23F44336.svg?logo=grabcad&logoColor=white)](https://grabcad.com/mert.kaan.cukadar-3)
 
 # 💻 Teknik Yetenekler:
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)

@@ -12,11 +12,11 @@ const Header = () => {
   };
 
   return (
-    <header className="text-white w-full shadow-sm bg-backgroundDefault">
+    <header className="text-white w-full shadow-sm bg-blogbarBg">
       <nav className="flex justify-between items-center p-5 text-gray-100">
         <div>
           <Link href="/" className="flex items-center space-x-2">
-            <Image src="/logo-transparent.png" alt="Tab Mert" width={50} height={50} className="cursor-pointer" />
+            <Image src="/logo-transparent.png" alt="Tab Mert" width={60} height={60} className="cursor-pointer" />
             <h1 className="text-2xl font-bold cursor-pointer">Tab Mert</h1>
           </Link>
         </div>
@@ -29,11 +29,6 @@ const Header = () => {
           <li className="cursor-pointer hover:text-blue-300">
             <Link href="/" className="p-2 px-3">
               Blog
-            </Link>
-          </li>
-          <li className="cursor-pointer hover:text-blue-300">
-            <Link href="/projects" className="p-2 px-3">
-              Projeler
             </Link>
           </li>
           <li className="cursor-pointer hover:text-blue-300">
@@ -56,11 +51,6 @@ const Header = () => {
           <li className="mb-4">
             <Link href="/" className="p-2 px-3 block text-center hover:text-blue-300">
               Blog
-            </Link>
-          </li>
-          <li className="mb-4">
-            <Link href="/projects" className="p-2 px-3 block text-center hover:text-blue-300">
-              Projeler
             </Link>
           </li>
           <li className="mb-4">

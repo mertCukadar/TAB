@@ -30,7 +30,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
       key={blog.id}
       className="relative flex flex-col items-center justify-center m-5 rounded-lg shadow-lg md:w-3/5 overflow-hidden group w-full"
     >
-      <div className="absolute top-0 left-0 w-full p-1 bg-blogbarBg rounded-t-lg flex justify-between z-20">
+      <div className="absolute top-0 left-0 w-full p-1 bg-cyan-800 rounded-t-lg flex justify-between z-20">
         <IoCloseCircleSharp size={30} className="text-white" />
         <div className="flex">
           <CiBatteryFull size={30} className="text-white" />
@@ -44,7 +44,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
           <p className="mt-3">{blog.description}</p>
         </div>
         <div className="absolute bottom-5 right-5">
-            <p className="text-sm text-green-200">{blog.created_at ? formatDate(blog.created_at) : ''}</p>
+            <p className="text-sm">{blog.created_at ? formatDate(blog.created_at) : ''}</p>
         </div>
       </Link>
     </div>
