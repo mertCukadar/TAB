@@ -1,4 +1,4 @@
-const API_URL = 'http://167.99.12.11:8000/api/';
+const API_URL = 'https://tabapi.tabmert.com/api/';
 
 
 
