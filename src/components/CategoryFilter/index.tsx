@@ -1,33 +1,19 @@
 import React from "react";
-import { GetCategories } from "@/app/api";
 
 interface Category {
-    id: number;
     name: string;
 }
 
 interface CategoryFilterProps {
-    onCategoryChange: (categoryId: number | null) => void;
-    selectedCategory: number | null;
+    onCategoryChange: (category: string | null) => void;
+    selectedCategory: string | null;
+    categories: string[]; // Kategorileri dışarıdan alıyoruz
 }
 
-const CategoryFilter: React.FC<CategoryFilterProps> = ({ onCategoryChange, selectedCategory }) => {
-    const [categories, setCategories] = React.useState<Category[]>([]);
+const CategoryFilter: React.FC<CategoryFilterProps> = ({ onCategoryChange, selectedCategory, categories }) => {
     
-    React.useEffect(() => {
-        const loadCategories = async () => {
-            try {
-                const data = await GetCategories();
-                setCategories(data);
-            } catch (error) {
-                console.error("Failed to load categories:", error);
-            }
-        };
-        loadCategories();
-    }, []);
-    
-    const handleCategoryClick = (categoryId: number | null) => {
-        onCategoryChange(categoryId);
+    const handleCategoryClick = (category: string | null) => {
+        onCategoryChange(category);
     };
     
     return (
@@ -39,13 +25,13 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ onCategoryChange, selec
                 >
                     All
                 </button>
-                {categories.map((category) => (
+                {categories.map((category, index) => (
                     <button
-                        key={category.id}
-                        className={`mx-1 my-2 px-3 py-1 rounded transition duration-300 ${selectedCategory === category.id ? 'bg-blogCardBg text-white' : 'bg-cyan-800 text-white'}`}
-                        onClick={() => handleCategoryClick(category.id)}
+                        key={index}
+                        className={`mx-1 my-2 px-3 py-1 rounded transition duration-300 ${selectedCategory === category ? 'bg-blogCardBg text-white' : 'bg-cyan-800 text-white'}`}
+                        onClick={() => handleCategoryClick(category)}
                     >
-                        {category.name}
+                        {category}
                     </button>
                 ))}
             </div>
@@ -57,13 +43,13 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ onCategoryChange, selec
                 >
                     All
                 </button>
-                {categories.map((category) => (
+                {categories.map((category, index) => (
                     <button
-                        key={category.id}
-                        className={`block w-full my-2 px-3 py-1 rounded transition duration-300 ${selectedCategory === category.id ? 'bg-blogCardBg text-white' : 'bg-cyan-800 text-white'}`}
-                        onClick={() => handleCategoryClick(category.id)}
+                        key={index}
+                        className={`block w-full my-2 px-3 py-1 rounded transition duration-300 ${selectedCategory === category ? 'bg-blogCardBg text-white' : 'bg-cyan-800 text-white'}`}
+                        onClick={() => handleCategoryClick(category)}
                     >
-                        {category.name}
+                        {category}
                     </button>
                 ))}
             </div>

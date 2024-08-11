@@ -8,7 +8,6 @@ const Footer = () => {
     <footer className="bg-blogbarBg text-gray-100 py-6 w-full">
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0">
-          <h1 className="text-2xl font-bold">Tab Mert</h1>
           <p className="text-sm">© 2024 Tab Mert. All rights reserved.</p>
         </div>
         <div className="flex space-x-6">

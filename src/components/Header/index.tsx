@@ -17,7 +17,7 @@ const Header = () => {
         <div>
           <Link href="/" className="flex items-center space-x-2">
             <Image src="/logo-transparent.png" alt="Tab Mert" width={60} height={60} className="cursor-pointer" />
-            <h1 className="text-2xl font-bold cursor-pointer">Tab Mert</h1>
+            <p className="text-2xl font-bold cursor-pointer">Tab Mert</p>
           </Link>
         </div>
 
