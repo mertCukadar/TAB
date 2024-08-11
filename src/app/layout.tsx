@@ -10,11 +10,6 @@ const inter = Roboto({
   subsets: ['latin'],
 })
 
-export const metadata: Metadata = {
-  title: "Tab Mert",
-  description: "Tab Mert's official website for his projects and blog posts.",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
