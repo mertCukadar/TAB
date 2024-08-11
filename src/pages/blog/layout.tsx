@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import "./globals.css";
+import "@/app/globals.css";
 import { Roboto } from 'next/font/google'
 
 const inter = Roboto({
