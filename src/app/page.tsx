@@ -1,67 +1,56 @@
-'use client';
-import React, { useEffect, useState } from 'react';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 import BlogCard from '@/components/BlogCards';
-import { FetchBlogs } from './api';
-import CategoryFilter from '@/components/CategoryFilter';
 
 interface Blog {
-    id: number;
+    id: string;
     title: string;
     description: string;
-    created_at?: string;
+    date: string;
+    category: string;
+    content: string;
+    slug: string;
+    postname: string;
 }
 
-const Page: React.FC = () => {
-    const [blogs, setBlogs] = useState<Blog[]>([]);
-    const [page, setPage] = useState(1);
-    const [totalPages, setTotalPages] = useState(1);
-    const [category, setCategory] = useState<number | null>(null);
+const postsDirectory = path.join(process.cwd(), 'src/content/posts');
 
-    useEffect(() => {
-        const loadBlogs = async () => {
-            try {
-                const data = await FetchBlogs(page, 2, category);
-                if (data && data.results) {
-                    setBlogs(data.results);
-                    setTotalPages(Math.ceil(data.count / (data.limit || 1)));
-                }
-            } catch (error) {
-                console.error('Failed to load blogs:', error);
-            }
-        };
-        loadBlogs();
-    }, [page, category]);
+export default function Page() {
+    // get file names
+    const fileNames = fs.readdirSync(postsDirectory);
+    const allPostsData: Blog[] = fileNames.map((fileName) => {
+        // Remove ".md" from file name to get id
+        const file_postname = fileName.replace(/\.md$/, '');
+        // Read markdown file as string
+        const fullPath = path.join(postsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-    const handlePageChange = (newPage: number) => {
-        setPage(newPage);
-    };
+        // Use gray-matter to parse the post metadata section
+        const matterResult = matter(fileContents);
 
-    const handleCategoryChange = (categoryId: number | null) => {
-        setCategory(categoryId);
-        setPage(1); // Reset to the first page when category changes
-    };
+        // Combine the data with the id
+        return {
+            id: matterResult.data.id,
+            postname: file_postname,
+            slug: fullPath,
+            title: matterResult.data.title || '',
+            description: matterResult.data.description || '',
+            date: matterResult.data.date || '',
+            category: matterResult.data.category || '',
+            content: matterResult.content,
+        } as Blog;
+    });
 
     return (
-        <div className="flex flex-col md:flex-row justify-center items-center p-5 text-gray-100 w-full bg-backgroundDefault">
-            <CategoryFilter onCategoryChange={handleCategoryChange} selectedCategory={category} />
-            <div className="flex flex-col items-center w-full md:ml-20">
-                {blogs.map((blog) => (
-                    <BlogCard key={blog.id} blog={blog} />
+        <div className="flex flex-col md:flex-row justify-center items-center p-5 text-gray-100 bg-backgroundDefault">
+            <div className="flex flex-col items-center">
+                {allPostsData.map((post) => (
+                    <div key={post.id} className='flex flex-col items-center w-full'>
+                        <BlogCard blog={post} />
+                    </div>
                 ))}
-                <div className="flex justify-center mt-5">
-                    {Array.from({ length: totalPages }, (_, index) => (
-                        <button
-                            key={index + 1}
-                            className={`mx-1 px-3 py-1 rounded ${page === index + 1 ? 'bg-blogbarBg text-white' : 'bg-gray-300 text-black'}`}
-                            onClick={() => handlePageChange(index + 1)}
-                        >
-                            {index + 1}
-                        </button>
-                    ))}
-                </div>
             </div>
         </div>
     );
-};
-
-export default Page;
+}
