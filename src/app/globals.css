@@ -38,3 +38,22 @@ body {
 .markdown-preview .code-line {
   color: rgb(36, 146, 219);
 }
+
+/* global.css veya Tailwind config dosyasına ekleyin */
+.prose {
+  max-width: 100%;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  color: #ffffff;
+}
+
+.prose pre, .prose code {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+
