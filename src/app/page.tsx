@@ -42,11 +42,16 @@ export default function Page() {
         } as Blog;
     });
 
+    // Tarihe göre sıralama (en yeni tarihler önce)
+    allPostsData.sort((a, b) => {
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+    });
+
     return (
         <div className="flex flex-col md:flex-row justify-center items-center p-5 text-gray-100 bg-backgroundDefault">
             <div className="flex flex-col items-center">
                 {allPostsData.map((post) => (
-                    <div key={post.id} className='flex flex-col items-center w-full'>
+                    <div key={post.id} className='flex flex-col items-center w-full h-screen'>
                         <BlogCard blog={post} />
                     </div>
                 ))}
