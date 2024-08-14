@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { getPostBySlug, getPostSlugs } from '../../lib/posts';
 import PageLayout from '../../components/PageLayout';
+import Script from 'next/script';
 
 const MarkdownPreview = dynamic(() => import('@uiw/react-markdown-preview'), { ssr: false });
 
@@ -14,6 +15,10 @@ interface BlogPostProps {
 export default function BlogPost({ title, date, content }: BlogPostProps) {
   return (
     <PageLayout>
+         <Script
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2073799749748484"
+                strategy="afterInteractive"
+            />
       <div className="min-h-screen flex flex-col justify-center items-center bg-backgroundDefault p-6">
         <article className="max-w-4xl w-full">
           <header className="mb-12 text-center">

@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import BlogCard from '@/components/BlogCards';
+import Script from 'next/script';
 
 interface Blog {
     id: string;
@@ -47,8 +48,14 @@ export default function Page() {
         return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
 
+
     return (
         <div className="flex flex-col md:flex-row justify-center items-center p-5 text-gray-100 bg-backgroundDefault">
+            <Script
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2073799749748484"
+                strategy="afterInteractive"
+            />
+                
             <div className="flex flex-col items-center">
                 {allPostsData.map((post) => (
                     <div key={post.id} className='flex flex-col items-center w-full h-screen'>
