@@ -2,7 +2,7 @@
 id: 2
 title: 'Sıfırdan Yazılım Öğrenmek'
 description: 'Yazılım öğrenmeye nasıl başlanılmalı nelere dikkat edilmeli'
-date: '2024-08-14'
+date: '2024-08-22'
 ---
 
 # İçindekiler
