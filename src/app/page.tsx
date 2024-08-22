@@ -58,7 +58,7 @@ export default function Page() {
                 
             <div className="flex flex-col items-center">
                 {allPostsData.map((post) => (
-                    <div key={post.id} className='flex flex-col items-center w-full h-screen'>
+                    <div key={post.id} className='flex flex-col items-center w-full '>
                         <BlogCard blog={post} />
                     </div>
                 ))}
