@@ -79,7 +79,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="mb-4">
-            <Link href="kategori/algoritma-sorulari/" className="p-2 px-3 block text-left hover:text-blue-300">
+            <Link href="/kategori/algoritma-sorulari/" className="p-2 px-3 block text-left hover:text-blue-300">
               Algoritma Soruları
             </Link>
           </li>
