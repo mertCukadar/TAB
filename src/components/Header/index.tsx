@@ -83,6 +83,11 @@ const Header = () => {
               Algoritma Soruları
             </Link>
           </li>
+          <li className="mb-4">
+            <Link href="/kategori/veri-yapilari-algoritmalar/" className="p-2 px-3 block text-left hover:text-blue-300">
+              Veri Yapıları ve Algoritmalar
+            </Link>
+          </li>
         </ul>
       </div>
     </header>
