@@ -14,7 +14,7 @@ export default function Page({ allPostsData, slug }: { allPostsData: any[], slug
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2073799749748484"
                 strategy="afterInteractive"
             />
-      <div className="text-white p-5 bg-backgroundDefault h-screen">
+      <div className="text-white p-5 bg-backgroundDefault">
         <div className="flex flex-col md:flex-row justify-center items-center">
           <div className="flex flex-col items-center md:w-3/6">
             {allPostsData.map((post) => (
