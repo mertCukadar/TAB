@@ -32,6 +32,7 @@ export default function BlogPost({ title, date, content }: BlogPostProps) {
           <MarkdownPreview
             source={content}
             style={{
+              backgroundColor: "white",
               padding: '20px',
               borderRadius: '8px',
               color: 'black',
