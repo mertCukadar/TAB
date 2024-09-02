@@ -2,7 +2,7 @@
 id: 4
 title: 'Oyun Geliştirme Süreci: Oyun Dünyasına Giriş'
 description: 'Oyun geliştirme süreci ve oyun türleri hakkında bir rehber.'
-date: '2024-08-23'
+date: '2024-09-02'
 ---
 
 # Oyun Geliştirme Süreci: Oyun Dünyasına Giriş
@@ -10,6 +10,10 @@ date: '2024-08-23'
 Oyunlar uzun yıllardır hayatımızda ve sen, değerli arkadaşım, oyun oynamaktan inanılmaz zevk alıyor ve şimdi kendi oyununu yapmak istiyorsun.
 
 Seni çok iyi anlıyorum ve bu yazıda __nasıl oyun yaparım__ sorusuna bir cevap arıyor olacağız.
+
+Eğer bu süreci benimle takip etmek istersen eğer videomu ve kanalımı takip edebilirsin.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ykLbJxsrDFA?si=mjAXuAk5qo62cV5p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Giriş
 
@@ -117,6 +121,4 @@ Oyun yayınlandıktan sonra bile geliştirme süreci bitmez:
 
 Bu süreç, oyunun yaşam döngüsünü uzatır ve oyunculara sürekli yeni deneyimler sunar.
 
----
-
-Oyun geliştirme süreci, yaratıcı bir fikirle başlayıp, planlama, geliştirme, test etme ve yayınlama aşamalarından geçerek oyuncularla buluşan kapsamlı bir süreçtir. Her aşamanın kendine has zorlukları ve gereksinimleri vardır, ancak doğru planlama ve ekip çalışması ile başarılı bir oyun geliştirilebilir.
+- Mert Kaan Cukadar (Tab Mert)

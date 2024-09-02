@@ -54,12 +54,26 @@ export default function BlogPost({ title, date, content }: BlogPostProps) {
           <MarkdownPreview
             source={content}
             style={{
-              backgroundColor: '#2d3250',
+              backgroundColor: "white",
               padding: '20px',
               borderRadius: '8px',
-              color: 'white',
+              color: 'black',
+              fontSize: "1rem",
               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.8)',
               width: '100%',
+            }}
+            components={{
+              ul: ({ children }) => (
+                <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>{children}</ul>
+              ),
+              ol: ({ children }) => (
+                <ol style={{ listStyleType: 'decimal', paddingLeft: '20px' }}>{children}</ol>
+              ),
+              li: ({ children }) => (
+                <li style={{ position: 'relative', paddingLeft: '20px', color: 'black' }}>
+                  {children}
+                </li>
+              ),
             }}
           />
         </article>
