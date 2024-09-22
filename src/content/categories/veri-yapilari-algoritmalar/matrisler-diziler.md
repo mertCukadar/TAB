@@ -2,7 +2,7 @@
 id: 3
 title: 'Diziler ve Matrisler'
 description: 'Diziler ve matrislerin temel yapılarını hatırladığımız ön hazırlık dersi.'
-category: 'veri-yapilari-ve-algoritmalar'
+category: 'veri-yapilari-algoritmalar'
 date: '2024-09-22'
 ---
 
