@@ -30,30 +30,39 @@ export default function BlogPost({ title, date, content }: BlogPostProps) {
             </time>
           </header>
           <MarkdownPreview
-            source={content}
-            style={{
-              backgroundColor: "white",
-              padding: '20px',
-              borderRadius: '8px',
-              color: 'black',
-              fontSize: "1rem",
-              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.8)',
-              width: '100%',
-            }}
-            components={{
-              ul: ({ children }) => (
-                <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>{children}</ul>
-              ),
-              ol: ({ children }) => (
-                <ol style={{ listStyleType: 'decimal', paddingLeft: '20px' }}>{children}</ol>
-              ),
-              li: ({ children }) => (
-                <li style={{ position: 'relative', paddingLeft: '20px', color: 'black' }}>
-                  {children}
-                </li>
-              ),
-            }}
-          />
+  source={content}
+  style={{
+    backgroundColor: "white",
+    padding: '20px',
+    borderRadius: '8px',
+    color: 'black',
+    fontSize: "1rem",
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.8)',
+    width: '100%',
+  }}
+  components={{
+    ul: ({ children }) => (
+      <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>{children}</ul>
+    ),
+    ol: ({ children }) => (
+      <ol style={{ listStyleType: 'decimal', paddingLeft: '20px' }}>{children}</ol>
+    ),
+    li: ({ children }) => (
+      <li style={{ position: 'relative', paddingLeft: '20px', color: 'black' }}>
+        {children}
+      </li>
+    ),
+    pre: ({ children }) => (
+      <pre style={{ backgroundColor: '#1e1e1e', padding: '15px', borderRadius: '8px', color: '#ffffff' }}>
+        {children}
+      </pre>
+    ),
+    code: ({ children }) => (
+      <code style={{ color: '#40A578' }}>{children}</code> // Kod bloğu içinde yazının rengini burada değiştirdik.
+    ),
+  }}
+/>
+
         </article>
       </div>
     </PageLayout>
