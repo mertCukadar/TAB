@@ -31,7 +31,7 @@ Abartıya kaçmadan, özellikle indie geliştiriciler görsel efektlerle oyunun 
 
 Bir korku filmi düşünün: ekranda sadece karanlık bir bodrum görüntüsü var, yanıp sönen ışıklar ama hiçbir ses duymuyorsunuz. Şimdi, aynı ortamda hafif bir beyaz gürültü ve floresan lambanın zayıf titreme sesini hayal edin. Anında daha gergin ve dikkatli hissetmez miydiniz? Oyunlarda da sesler, benzer hisleri yaratabilir. Sadece mekaniğe veya hikayeye odaklanmak yerine, ses tasarımıyla bu deneyimi daha üst seviyeye taşıyabilirsiniz.
 
-![Korkutucu Bodrum](https://pixnio.com/free-images/2020/07/28/2020-07-28-10-33-19-576x384.jpg)'
+![Korkutucu Bodrum](https://live.staticflickr.com/5210/5310784956_49b6e340dc_b.jpg)'
 
 ## Geliştirme Sürecinde Faydalanılabilecek Temel Unsurlar
 
