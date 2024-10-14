@@ -6,42 +6,13 @@ category: 'veri-yapilari-algoritmalar'
 date: '2024-10-14'
 ---
 
-## Özyinelemeli Fonksiyonlar ve Dinamik Bellek Yönetimi
-
-Özyinelemeli fonksiyonlar, bir problemin daha küçük alt problemlerine bölünerek çözüldüğü fonksiyonlardır. Bir özyinelemeli fonksiyon, kendini doğrudan ya da dolaylı olarak tekrar çağırarak sonuca ulaşır. Bu tür fonksiyonların iki önemli bileşeni vardır:
-
-1. **Sonlandırma koşulu:** Fonksiyonun kendini tekrar çağırmaması gereken, yani durması gereken bir durum. Bu koşul sağlanmadığında fonksiyon sonsuz döngüye girer.
-2. **Özyinelemeli durum:** Fonksiyonun, problemi daha küçük bir alt problem şeklinde çağırarak çözmeye çalıştığı durum.
-
-Aşağıdaki örnek, özyinelemeli olarak faktöriyel hesaplamasını gösterir:
-
-```c
-#include <stdio.h>
-
-int faktoriyel(int n) {
-    if (n <= 1) {
-        return 1; // Sonlandırma koşulu
-    } else {
-        return n * faktoriyel(n - 1); // Özyinelemeli durum
-    }
-}
-
-int main() {
-    int sayi = 5;
-    printf("%d! = %d\n", sayi, faktoriyel(sayi));
-    return 0;
-}
-```
-
----
-
 ## Dinamik Bellek Yönetimi ve İşaretçiler
 
-### `Struct` Yapısı
+### Struct Yapısı
 
 C dilinde `struct` anahtar kelimesi, birden fazla veri tipini tek bir çatı altında toplamak için kullanılır. Yapılar (structures), aynı ya da farklı türden veri elemanlarının bir arada bulunduğu veri yapılarıdır ve nesneye yönelik programlamadaki sınıfların basit bir versiyonu olarak düşünülebilir. Ancak `struct` yapıları, sadece veri saklar ve metod içermez.
 
-#### Örnek: `struct` Kullanımı
+#### Örnek: struct Kullanımı
 
 ```c
 #include <stdio.h>
@@ -66,7 +37,7 @@ int main() {
 
 Bu örnekte, `Kisi` adlı bir yapı tanımlandı ve içerisinde bir `yas` ve bir `cinsiyet` değişkeni barındırıyor. Bu yapının bir örneği olan `birey` değişkeni oluşturulup değer ataması yapıldı.
 
-### İşaretçiler (`Pointer`)
+### İşaretçiler (Pointer)
 
 İşaretçiler, bellekteki başka bir değişkenin adresini tutan değişkenlerdir. C dilinde işaretçileri kullanmak için `*` ve `&` operatörleri kullanılır:
 
@@ -95,15 +66,15 @@ Bu örnekte, `sayi` değişkeninin adresi `isaretci` işaretçisine atanıyor ve
 
 ---
 
-## Dinamik Bellek Yönetimi (`malloc`, `calloc`, `realloc`, `free`)
+## Dinamik Bellek Yönetimi (malloc, calloc, realloc, free)
 
 Dinamik bellek yönetimi, belleğin çalışma zamanında (runtime) ayrılması ve serbest bırakılması anlamına gelir. C dilinde bu işlemler için standart kütüphanede `malloc`, `calloc`, `realloc` ve `free` fonksiyonları bulunur.
 
-### `malloc` (Memory Allocation)
+### malloc (Memory Allocation)
 
 `malloc` fonksiyonu, belirli bir bellek boyutunu ayırır ve başlangıç adresini döner. Bellek ilk başta rastgele değerler içerir. 
 
-#### Örnek: `malloc` ile Dinamik Bellek Ayırma
+#### Örnek: malloc ile Dinamik Bellek Ayırma
 
 ```c
 #include <stdio.h>
@@ -135,11 +106,11 @@ int main() {
 ```
 
 
-## Dinamik Bellek Ayırmada Tip Dönüşümü `(int*)`
+## Dinamik Bellek Ayırmada Tip Dönüşümü (int*)
 
 C dilinde dinamik bellek yönetimi için kullanılan `malloc`, `calloc`, ve `realloc` fonksiyonları, herhangi bir veri tipiyle doğrudan ilişkili değildir ve dönüş tipi olarak `void*` dönerler. `void*`, herhangi bir veri tipine işaret edebilen genel bir işaretçi türüdür. Bu nedenle, döndürülen işaretçiyi istediğimiz veri türüne dönüştürmemiz gerekir.
 
-### `(int*)` Neden Kullanılır?
+### (int*) Neden Kullanılır?
 
 `(int*)` ifadesi, `malloc` fonksiyonunun döndürdüğü `void*` türündeki genel işaretçiyi, bir `int*` türüne dönüştürmek için kullanılır. Böylece, ayrılan belleğin bir `int` türünde veri tutacağını belirlemiş oluruz. 
 
@@ -230,7 +201,7 @@ Bu örnek, hem tip dönüşümü ile hem de tip dönüşümü olmadan dinamik be
 - Tip dönüşümü kullanarak hangi türde bir bellek alanı ayrıldığını açıkça belirtmek, iyi bir programlama pratiği olarak kabul edilir.
 
 
-### `calloc` (Contiguous Allocation)
+### calloc (Contiguous Allocation)
 
 `calloc`, `malloc` ile benzer bir işlev görür ancak bellek sıfırlanarak ayrılır. Bellek blokları belirli bir boyutta ve sayıda ayrılır.
 
@@ -261,11 +232,11 @@ int main() {
 }
 ```
 
-### `realloc` (Reallocation)
+### realloc (Reallocation)
 
 `realloc`, daha önce ayrılmış bir bellek bloğunun boyutunu değiştirmek için kullanılır.
 
-#### Örnek: `realloc` ile Bellek Boyutunu Değiştirme
+#### Örnek: realloc ile Bellek Boyutunu Değiştirme
 
 ```c
 #include <stdio.h>
@@ -308,7 +279,7 @@ int main() {
 }
 ```
 
-### `free` (Bellek Serbest Bırakma)
+### free (Bellek Serbest Bırakma)
 
 Dinamik olarak ayrılmış belleği serbest bırakmak için `free` fonksiyonu kullanılır. Belleğin serbest bırakılması, bellek sızıntılarını (memory leaks) önlemek için önemlidir.
 
@@ -376,7 +347,7 @@ Bu örnek, Fibonacci serisinin `n`'inci elemanını özyinelemeli olarak hesapla
 
 Dinamik bellek ayırma fonksiyonları, bellekte programın çalışma zamanında veri yapıları oluşturmayı sağlar. `malloc`, `calloc`, ve `realloc` fonksiyonları ile dinamik bellek ayırma yapabiliriz.
 
-#### `malloc` ile Dinamik Bellek Ayırma
+#### malloc ile Dinamik Bellek Ayırma
 
 `malloc` fonksiyonu, belirtilen boyutta bellek ayırır ve ayrılan belleğin başlangıç adresini döner. Ayrılan bellek sıfırlanmaz, rastgele veri içerebilir.
 
@@ -385,7 +356,7 @@ int *dizi;
 dizi = (int*)malloc(5 * sizeof(int)); // 5 elemanlık bir int dizisi için bellek ayırır
 ```
 
-#### `calloc` ile Bellek Ayırma
+#### calloc ile Bellek Ayırma
 
 `calloc`, bellek ayırırken aynı zamanda ayrılan belleği sıfırlarla doldurur. İki parametre alır: kaç tane eleman olduğu ve her bir elemanın boyutu.
 
@@ -394,7 +365,7 @@ int *dizi;
 dizi = (int*)calloc(5, sizeof(int)); // 5 elemanlık bir int dizisi için sıfırlarla dolu bellek ayırır
 ```
 
-#### `realloc` ile Bellek Yeniden Boyutlandırma
+#### realloc ile Bellek Yeniden Boyutlandırma
 
 `realloc` fonksiyonu, önceden ayrılmış bir bellek alanını belirtilen yeni boyuta göre yeniden boyutlandırır. Önceki bellek alanındaki veriler korunur.
 
